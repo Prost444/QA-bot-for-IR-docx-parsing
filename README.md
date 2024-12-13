@@ -55,7 +55,7 @@ This repository contains the solution for the NLP case from Rosneft &amp; MIREA 
 1. Установите зависимости с помощью
 
 ```batch
-pip install -r requirements.txt.
+pip install -r requirements.txt
 ```
 
 2. Подготовьте .docx файлы и обработайте их с помощью модуля docx_to_lang.
