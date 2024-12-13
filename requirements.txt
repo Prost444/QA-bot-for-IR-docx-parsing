@@ -1,0 +1,11 @@
+pathlib
+pydantic
+python-docx
+spacy
+torch
+transformers
+langchain
+langchain_community
+bitsandbytes
+faiss-cpu
+# faiss-gpu
