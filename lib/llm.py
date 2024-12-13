@@ -2,7 +2,7 @@ import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 class LLM:
-	def __init__(self, model_name : str) -> None:
+	def __init__(self, model_name : str,store : bool = False) -> None:
 		"""
 		Инициализация LLM с указанной моделью.
 
@@ -21,6 +21,9 @@ class LLM:
 			model_name,
 			quantization_config=bnb_config
 		).to(self.device)
+
+		if store:
+			self.model.save_pretrained("./")
 
 	def answer(self, context : str, question : str) -> str:
 		"""

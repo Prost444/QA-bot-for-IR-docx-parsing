@@ -1,3 +1,9 @@
 # Ignore
 __pycache__/
 _temp/
+documents/
+
+*.safetensors
+*.json
+*.faiss
+*.pkl
