@@ -228,7 +228,7 @@ streamlit run app.py
 
 Или запусти run_app.bat
 
-![streamlit](https://github.com/user-attachments/assets/5fdbc794-43eb-4e7e-9c6b-5720f09c5ffc)
+![streamlit](https://github.com/user-attachments/assets/9ce18ed0-16ba-4449-8020-73fb44befbf3)
 
 6. Если остаются вопросы, посмотри [блокнот с примером](example.ipynb)
 
