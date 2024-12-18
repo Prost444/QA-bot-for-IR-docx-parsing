@@ -1,7 +1,11 @@
 # Ignore
 __pycache__/
 _temp/
-documents/
+_documents/
+_database/
+_models/
+_upload/
+_tools/
 
 *.safetensors
 *.json

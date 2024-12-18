@@ -1,8 +1,10 @@
+import faiss
+import os
 from docx.table import Table as TableObject
 from docx import Document as CreateDocument
 from docx.document import Document as DocumentObject
 from langchain.docstore.document import Document as LangchainDocument
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores.faiss import FAISS
 from pathlib import Path
 import re
 import spacy
@@ -25,7 +27,8 @@ def iter_docx_data(page_id : int, page_name : str, doc : DocumentObject, nlp : s
 			values.append(row_values)
 
 		containers.append((table._element,values))
-
+	''' Парсинг списков
+	
 	current_list = []
 	first_element = None
 
@@ -39,7 +42,7 @@ def iter_docx_data(page_id : int, page_name : str, doc : DocumentObject, nlp : s
 			containers.append((first_element,current_list))
 			current_list = []
 			first_element = None
-			
+	'''
 	for i in range(len(containers)):
 		container_element,container_values = containers[i][0],containers[i][1]
 
@@ -84,8 +87,11 @@ def iter_docx_data(page_id : int, page_name : str, doc : DocumentObject, nlp : s
 				"header": container_values[0]
 			}
 		)
+		
 def docx2faiss(files : list[str], vectorstore : FAISS, nlp : spacy.Language) -> None:
 	for i in range(len(files)):
+		print(f"={i + 1}/{len(files)}=: Parsing document: {files[i]}")
+
 		filepath = Path(files[i])
 
 		documents = []
