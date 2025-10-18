@@ -1,6 +1,6 @@
 # QA-bot-for-IR-docx-parsing
 
-This repository contains the solution for the NLP case from Rosneft &amp; MIREA AI hackathon. It provides a method for parsing docx files or wiki_dump pages, extracting tables and lists for further processing and embedding them into a QA model.
+This repository contains the solution for the NLP case from Rosneft &amp; MIREA AI hackathon. It provides a method for parsing docx files or wiki_dump pages, extracting tables and lists for further processing and embedding them into a QA model. 
 
 Этот репозиторий предоставляет решение для обработки .docx документов, извлечения структурированных данных (например, таблиц и списков) и интеграции их в систему для ответа на вопросы с использованием современных NLP-моделей. Проект разработан для масштабируемой обработки документов и интеграции с трансформерными языковыми моделями.
 
